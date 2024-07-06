@@ -1,0 +1,77 @@
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    margin-left: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    max-height: calc(100vh - 40px); 
+    overflow-y: auto; 
+    overflow-x: hidden;
+  }
+  
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group button{
+    margin-top: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    color: #555;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  .form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    font-size: 1em;
+  }
+  
+  .experience-item,
+  .skill-item {
+    padding: 5px;
+    background: #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .button-group button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .save-button, 
+  .cancel  {
+    color:blueviolet
+  }
+  .save-button:hover,
+  .cancel:hover{
+    background-color:blueviolet;
+    color: white;
+  }
