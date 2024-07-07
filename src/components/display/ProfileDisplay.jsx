@@ -7,7 +7,7 @@ const ProfileDisplay = ({ profile }) => {
 
   return (
     <div className="profile-display">
-      <section>
+      <section className='section-info'>
       <h2>Profile Information</h2>
       <p>Name: {personalInfo.name}</p>
       <p>Email: {personalInfo.email}</p>
@@ -27,7 +27,7 @@ const ProfileDisplay = ({ profile }) => {
         ))}
       </ul>
       </section>
-      <section>
+      <section className='section-resume'>
       {resume && (
         <div className="resume-preview">
           <h2>Resume Preview</h2>

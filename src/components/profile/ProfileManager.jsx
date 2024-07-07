@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProfileDisplay from './ProfileDisplay';
+import ProfileDisplay from '../display/ProfileDisplay';
 
 const ProfileManager = () => {
   const [profile, setProfile] = useState({

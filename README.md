@@ -26,7 +26,7 @@ To set up the project locally, follow these steps:
    To start the development server, use the following command:
     ```bash
     npm start
-    This will start the app and open it in your default web browser. By default, it will be accessible at http://localhost:3000.
+    
 
 ##  Usage
 

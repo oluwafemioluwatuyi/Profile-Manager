@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import ProfileManager from './components/ProfileManager';
-import ProfileForm from './components/ProfileForm';
+import Sidebar from './components/sidebar/Sidebar'
+import ProfileManager from './components/profile/ProfileManager';
+import ProfileForm from './components/form/ProfileForm';
 import './App.css';
 
 const App = () => {
@@ -27,12 +27,12 @@ const App = () => {
     <Router>
       <div className="app-layout">
         <Sidebar />
-        <div className="content">
+        {/* <div className="content"> */}
           <Routes>
             <Route path="/" element={<ProfileManager profile={profile} />} />
             <Route path="/settings" element={<ProfileForm profile={profile} onProfileUpdate={handleProfileUpdate} />} />
           </Routes>
-        </div>
+        {/* </div> */}
       </div>
     </Router>
   );
