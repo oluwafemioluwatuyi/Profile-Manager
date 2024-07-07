@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Profile Manager
+## Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Profile Manager is a web application built using React that allows users to manage their personal information, professional experiences, skills, and upload their resume in a PDF format. The application features an easy-to-use form for updating profile details and a PDF viewer for displaying the uploaded resume.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Installation](#installation)
+2. [Running the Project](#running-the-project)
+3. [Usage](#usage)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To set up the project locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/oluwafemioluwatuyi/profile-manager.git
+   cd profile-manager
 
-### `npm test`
+2. **Install dependencies**:
+   Make sure you have Node.js and npm installed on your machine. Then, run the following command:
+   ``` bash
+   npm install
+3. **Running the Project**:
+   To start the development server, use the following command:
+    ```bash
+    npm start
+    This will start the app and open it in your default web browser. By default, it will be accessible at http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##  Usage
 
-### `npm run build`
+1. **Profile Form**:
+    Navigate to the "Settings" page using the sidebar.
+    Fill in your personal information, professional experiences, skills, and upload your resume in PDF format.
+    Click the "Save" button to store your profile details. The profile information will be saved in local storage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Profile Display**:
+    Navigate back to the home page.
+    The profile information and the uploaded resume will be displayed. The personal information, professional experiences, and skills will be displayed in one section, 
+    while the resume will be displayed using the PDF viewer.
+    File Structure
+    src/components/ProfileForm.js: Component for the profile form where users can input their details and upload a resume.
+    src/components/ProfileDisplay.js: Component to display the user's profile information and resume.
+    src/components/ProfileManager.js: Component to manage the state and data flow between the form and display components.
+    src/components/Sidebar.js: Sidebar navigation component.
+    src/App.js: Main application component where routes and layout are defined.
+    src/App.css: Global styles for the application.
+    src/components/ProfileDisplay.css: Styles specific to the ProfileDisplay component.
+    Technologies Used
+    React
+    React Router
+    React Dropzone
+    React PDF Renderer
+    CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Testing
+    
