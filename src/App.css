@@ -39,3 +39,47 @@ h2{
   font-size: 16px;
   font-weight: 400;
 }
+
+.profile-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-display h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-display ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile-display ul li {
+  margin-bottom: 5px;
+}
+
+.resume-preview {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .profile-display {
+    flex-direction: column;
+  }
+
+  .profile-display div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .profile-display div:last-child {
+    margin-bottom: 0;
+  }
+}

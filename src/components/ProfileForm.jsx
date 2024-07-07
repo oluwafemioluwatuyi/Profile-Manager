@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDropzone } from 'react-dropzone';
 import './ProfileForm.css';
 
 const ProfileForm = ({ profile, onProfileUpdate }) => {
   const navigate = useNavigate();
   const initialProfile = JSON.parse(localStorage.getItem('profile')) || profile;
-  
+
   const [formState, setFormState] = useState({
     personalInfo: {
       name: '',
@@ -42,11 +43,18 @@ const ProfileForm = ({ profile, onProfileUpdate }) => {
     }));
   };
 
-  const handleFileChange = (e) => {
-    setFormState({
-      ...formState,
-      resume: e.target.files[0]
-    });
+  const handleDrop = (acceptedFiles) => {
+    if (acceptedFiles.length > 0) {
+      const file = acceptedFiles[0];
+      if (file.type === 'application/pdf') {
+        setFormState({
+          ...formState,
+          resume: file
+        });
+      } else {
+        alert('Only PDF files are allowed.');
+      }
+    }
   };
 
   const handleAddExperience = () => {
@@ -108,6 +116,11 @@ const ProfileForm = ({ profile, onProfileUpdate }) => {
     navigate('/');
   };
 
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop: handleDrop,
+    accept: 'application/pdf'
+  });
+
   return (
     <form onSubmit={handleSubmit} className="profile-form">
       <div className="form-section">
@@ -151,7 +164,19 @@ const ProfileForm = ({ profile, onProfileUpdate }) => {
       <div className="form-section">
         <h2>Resume Upload</h2>
         <div className="form-group">
-          <input type="file" onChange={handleFileChange} />
+          <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
+            <input {...getInputProps()} />
+            {isDragActive ? (
+              <p>Drop the files here ...</p>
+            ) : (
+              <p>Drag and drop a PDF file format, or click to select one</p>
+            )}
+          </div>
+          {formState.resume && (
+            <div>
+              <p>Selected file: {formState.resume.name}</p>
+            </div>
+          )}
         </div>
       </div>
 

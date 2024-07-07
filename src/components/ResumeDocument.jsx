@@ -1,4 +1,3 @@
-// src/components/ResumeDocument.js
 import React from 'react';
 import { Document, Page, Text } from '@react-pdf/renderer';
 

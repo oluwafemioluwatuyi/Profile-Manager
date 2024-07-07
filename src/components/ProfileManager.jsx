@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import ProfileDisplay from './ProfileDisplay';
-import { PDFViewer } from '@react-pdf/renderer';
 
 const ProfileManager = () => {
   const [profile, setProfile] = useState({
@@ -34,4 +33,3 @@ const ProfileManager = () => {
 };
 
 export default ProfileManager;
-

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Sidebar.css'; // Import your Sidebar CSS file
+import './Sidebar.css';
 
 const Sidebar = () => {
   return (
@@ -12,10 +12,6 @@ const Sidebar = () => {
         <NavLink to="/settings" className="sidebar-link">
           Settings
         </NavLink>
-        <NavLink to="/settings" className="sidebar-link">
-          Logout
-        </NavLink>
-        
       </div>
     </div>
   );
