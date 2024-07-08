@@ -27,12 +27,12 @@ const App = () => {
     <Router>
       <div className="app-layout">
         <Sidebar />
-        {/* <div className="content"> */}
+        <div className="content">
           <Routes>
             <Route path="/" element={<ProfileManager profile={profile} />} />
             <Route path="/settings" element={<ProfileForm profile={profile} onProfileUpdate={handleProfileUpdate} />} />
           </Routes>
-        {/* </div> */}
+        </div>
       </div>
     </Router>
   );

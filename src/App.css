@@ -19,8 +19,13 @@
   background: #e0e0e0; 
 }
 
-.profile-manager,
-.profile-display {
+.profile-display{
+  display: flex;
+  gap: 100px;
+}
+
+.profile-manager
+ {
   flex: 1; 
   display: flex;
   justify-content: center; 
